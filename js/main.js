@@ -10,12 +10,15 @@ const app = new Vue({
                 text: "Lavare l'auto",
                 done: "false"
             }
-        ]
-
+        ],
+        newTask: ""
     },
     methods: {
-        isClear(){
-            return 0;
+        addTask(){
+            this.todos.push({
+                    text: this.newTask,
+                    done: "false"})
+            this.newTask = "";
         }
     },
 })
