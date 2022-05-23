@@ -24,13 +24,16 @@
                         <h1>My Toboolist</h1>
                     </div>
                     <div class="col-12">
-                        <input type="text" name="add-task" id="add-task" placeholder="Add your personal task" required
-                        v-model = "newTask" @keyup.enter = addTask()>
-                        <button class="btn_cs" @click = addTask()>Submit</button>
+                        <form>
+                            <input type="text" name="add-task" id="add-task" placeholder="Add your personal task" v-model = "newTask" @keyup.enter.prevent = "addTask()">
+                            <button class="btn_cs" @click.prevent = "addTask()">Submit</button>
+                        </form>
                     </div>
                     <ul id = "task-list" class="text-start">
-                        <li v-for = "(todo, index) in todos" >
-                            {{todo.text}}
+                        <li v-for = "(todo, index) in todos">
+                            <span v-bind:class = "{complete : todo.done}" >{{todo.text}}</span>
+                            <button class = "btn_cs" @click = "removeTask(index)">Remove</button>
+                            <button class = "btn_cs" @click = "checkTask(index)">Done</button>
                         </li>
                     </ul>
                 </div>
