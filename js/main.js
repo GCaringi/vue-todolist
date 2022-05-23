@@ -8,7 +8,7 @@ const app = new Vue({
             },
             {
                 text: "Lavare l'auto",
-                done: true
+                done: false
             }
         ],
         newTask: ""
@@ -37,4 +37,4 @@ const app = new Vue({
             this.todos[index].done = !this.todos[index].done;
         }
     }
-})
+}) 

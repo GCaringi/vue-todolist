@@ -31,7 +31,7 @@
                     </div>
                     <ul id = "task-list" class="text-start">
                         <li v-for = "(todo, index) in todos">
-                            <span v-bind:class = "{complete : todo.done}" >{{todo.text}}</span>
+                            <span @click= "checkTask(index)" v-bind:class = "{complete : todo.done}">{{todo.text}}</span>
                             <button class = "btn_cs" @click = "removeTask(index)">Remove</button>
                             <button class = "btn_cs" @click = "checkTask(index)">Done</button>
                         </li>
