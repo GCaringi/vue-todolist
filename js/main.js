@@ -21,7 +21,7 @@ const app = new Vue({
                 this.todos.push(
                     {
                         text: this.newTask,
-                        done: "false;"
+                        done: false
                     }
                 );
                 this.newTask = "";
