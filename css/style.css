@@ -1,27 +1,91 @@
-.wrapper_cs{
+body{
     height: 100vh;
+    background-color: #F1A208;
     display: grid;
     place-items: center;
-    background-color: lightgreen;
+}
+
+.wrapper_cs{
+    width: 80%;
+    text-align: center;
 }
 
 .container_cs{
+    color: #fff;
+    font-size: 18px;
     width: 70%;
-    background-color: green;
+    background-color: #005377e9;
+    border-radius: 30px;
+    border: 3px solid #fff;
+}
+
+/*------------------ 
+        BUTTONS
+------------------*/
+
+.btn_cs{
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    padding: 5px 15px; 
+}
+
+.btn_cs-add{
+    height: 49px;
+    aspect-ratio: 1/1;
+    border: 3px solid #06A77D;
+}
+
+.btn_cs-remove:hover{
+    color: red;
+}
+
+.btn_cs-check:hover{
+    color: green;
+}
+
+.btn_cs-add:hover{
+    color: #D5C67A;
+}
+
+.title{
+    font-size: 80px;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 6px 1px 1px black
 }
 
 #add-task{
     width: 65%;
+    padding: 8px 0px 8px 20px;
+    border-radius: 20px;
+    border: 3px solid #06A77D;
+}
+
+.list-wrapper{
+    max-height: 70vh;
+    overflow: auto;
+}
+
+span{
+    font-size: 1.5rem;
 }
 
 ul{
     list-style: none;
+    padding: 0px;
+}
+
+li{
+    margin: 8px 0px;
+
 }
 
 #task-list{
-    margin: auto;
+    width: 50%;
 }
 
 .complete{
-    text-decoration: underline;
+    text-decoration: line-through;
 }
